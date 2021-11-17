@@ -2,6 +2,11 @@
 
 - [LASSO](#LASSO)
 - [DOWNLOAD AND INSTALLATION](#download-and-installation)
+- [Arguments](#Arguments)
+- [Dataset](#Dataset)
+- [Result](#Result)
+- [Contact](#Contact)
+- [Reference](#Reference)
 
 # LASSO 
 LASSO is a C++ software package that perform penalized-likelihood approach for multiple typee of many features with missing data using expectation-maximization (EM) algorithm.
@@ -26,9 +31,9 @@ LASSO is an executable file. Run `LASSO.exe` through command prompt with a vecto
     please input the path of the dataset : [Input your dataset here]
     ```
     *You can input the relative path of the dataset if the dataset is not at the same directory of `LASSO.exe`
-    *Sample dataset can be downloaded from [github page](https://github.com/alexwky/LASSO).
+    
 
-# Arguments #
+# Arguments
 
 There are 8 arguments that users have to input to the executable file through command prompt. Please read the following table for the details of the 8 arguments:
 
@@ -43,14 +48,15 @@ There are 8 arguments that users have to input to the executable file through co
 | dirname  | Output directory | Any file path | -  | ✔  | <ul><li>Relative path can be used</li><li>Default : current working directory</li></ul>  |
 | foldername  | Output folder name | Any name | -  | ✔  | Default `Result`  |
 
-# Dataset #
+# Dataset
 
 The input dataset consist of 3 components outcome variable `Y`, covariates `X` and potentially missing covariates `S`. Therefore, dataset is a `n x (p+k+1)` amatrix, where `n` is the sample size, `p` is the number of covariates and `k` is the number of potentially missing covariates. The dataset should be in following format:
 |Outcome variable| 1st covariate |2nd covariate|...|pth covariate|1st missing covariate|2nd missing covariate|...|kth missing covariate|
 |---|---|---|---|---|---|---|---|---|
 ||||||||||
+*Sample dataset can be downloaded from [github page](https://github.com/alexwky/LASSO).
 
-# Result #
+# Result
 
 The results will be stored in an output folder. By default, the output folder is called "Result" under current working directory. The output folder consist of following `.csv` files:
 
@@ -70,10 +76,7 @@ The results will be stored in an output folder. By default, the output folder is
  8. Joint-loglikelihood.csv
  9. Joint-param.csv
 
-# Example #
-
-
-# Contact #
+# Contact
 
 Wong Kin Yau, Alex <<kin-yau.wong@polyu.edu.hk>>
 
