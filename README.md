@@ -9,7 +9,7 @@
 - [Reference](#Reference)
 
 # LASSO 
-LASSO is a C++ software package that perform penalized-likelihood approach for multiple typee of many features with missing data using expectation-maximization (EM) algorithm.
+LASSO is a C++ software package that perform penalized-likelihood approach for multiple typee of many features with missing data using expectation-maximization (EM) algorithm. We use a latent variable model to characterize the relationships across and within data types and to infer missing values from observed data. We develop a penalized-likelihood approach for variable selection and parameter estimation and devise an efficient expectation-maximization (EM) algorithm to implement our approach. We establish the asymptotic properties of the proposed estimators when the number of features increases at a polynomial rate of the sample size. 
 
 # DOWNLOAD AND INSTALLATION
 ## Download
