@@ -50,7 +50,7 @@ There are 8 arguments that users have to input to the executable file through co
 
 # Dataset
 
-The input dataset consist of 3 components outcome variable `Y`, covariates `X` and potentially missing covariates `S`. Therefore, dataset is a `n x (p+k+1)` amatrix, where `n` is the sample size, `p` is the number of covariates and `k` is the number of potentially missing covariates. The dataset should be in following format:
+The input dataset should be in `.csv` format and consist of 3 components outcome variable `Y`, covariates `X` and potentially missing covariates `S`. Therefore, dataset is a `n x (p+k+1)` amatrix, where `n` is the sample size, `p` is the number of covariates and `k` is the number of potentially missing covariates. The dataset should be in following format:
 |Outcome variable| 1st covariate |2nd covariate|...|pth covariate|1st missing covariate|2nd missing covariate|...|kth missing covariate|
 |---|---|---|---|---|---|---|---|---|
 ||||||||||
@@ -66,7 +66,7 @@ The results will be stored in an output folder. By default, the output folder is
  2. Completye-lambda.csv
  3. Complete-loglikelihood.csv
  
-`Impute & Joint mode`(mode == 1)
+`Impute & Joint mode` (mode == 1)
  1. Impute.csv
  2. Impute-imploglikelihood.csv
  3. Impute-lambda.csv
