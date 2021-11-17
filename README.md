@@ -54,6 +54,7 @@ The input dataset consist of 3 components outcome variable `Y`, covariates `X` a
 |Outcome variable| 1st covariate |2nd covariate|...|pth covariate|1st missing covariate|2nd missing covariate|...|kth missing covariate|
 |---|---|---|---|---|---|---|---|---|
 ||||||||||
+
 *Sample dataset can be downloaded from [github page](https://github.com/alexwky/LASSO).
 
 # Result
