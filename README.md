@@ -1,14 +1,32 @@
-# LASSO
-LASSO is a program that perform penalized-likelihood approach for multiple typee of many features with missing data using expectation-maximization (EM) algorithm.
+**Table of Contents**
 
-# Installation #
+- [LASSO](#LASSO)
+- [DOWNLOAD AND INSTALLATION](#download-and-installation)
 
+# LASSO 
+LASSO is a C++ software package that perform penalized-likelihood approach for multiple typee of many features with missing data using expectation-maximization (EM) algorithm.
+
+# DOWNLOAD AND INSTALLATION
+## Download
+The latest version of LASSO can be downloaded from [github page](https://github.com/alexwky/LASSO).
+
+## Installation
 LASSO is an executable file. Run `LASSO.exe` through command prompt with a vector of arguments and an organized dataset.
-Example
-```
-cd <LASSO_REPO_PATH>
-LASSO type 0 method 0 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 20,30,40
-```
+1. Go to the directory that have `LASSO.exe`
+    ```
+    cd ./[destination directory]
+    ```
+2. Run `LASSO.exe` 
+    ```
+    LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [dirname] [foldername]
+    ```
+3. `LASSO.exe` will ask for yuor dataset
+    ```
+    C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30
+    please input the path of the dataset : [Input your dataset here]
+    ```
+    *You can input the relative path of the dataset if the dataset is not at the same directory of `LASSO.exe`
+    *Sample dataset can be downloaded from [github page](https://github.com/alexwky/LASSO).
 
 # Arguments #
 
@@ -21,7 +39,7 @@ There are 8 arguments that users have to input to the executable file through co
 | penaltyno | Penalty type| 0  | <ul><li>0 : Complete</li></ul>  | ✖  | -  |
 | sizeX  | Number of X  | All integer ≥ 0  || ✖  | - |
 | r  | Numbers of latent variables |   | -  | ✖  | -  |
-| groupsize  |  | |   | ✖  | -  |
+| groupsize  |Dimension of each latent variables  | |   | ✖  | -  |
 | dirname  | Output directory | Any file path | -  | ✔  | <ul><li>Relative path can be used</li><li>Default : current working directory</li></ul>  |
 | foldername  | Output folder name | Any name | -  | ✔  | Default `Result`  |
 
@@ -36,12 +54,12 @@ The input dataset consist of 3 components outcome variable `Y`, covariates `X` a
 
 The results will be stored in an output folder. By default, the output folder is called "Result" under current working directory. The output folder consist of following `.csv` files:
 
-`Complete mode`
+`Complete mode` (mode == 0)
  1. Complete.csv
  2. Completye-lambda.csv
  3. Complete-loglikelihood.csv
  
-`Impute & Joint mode`
+`Impute & Joint mode`(mode == 1)
  1. Impute.csv
  2. Impute-imploglikelihood.csv
  3. Impute-lambda.csv
@@ -51,6 +69,9 @@ The results will be stored in an output folder. By default, the output folder is
  7. Joint-lambda.csv
  8. Joint-loglikelihood.csv
  9. Joint-param.csv
+
+# Example #
+
 
 # Contact #
 
