@@ -23,9 +23,9 @@ LASSO is an executable file. Run `LASSO.exe` through command prompt with a vecto
     ```
 2. Run `LASSO.exe` 
     ```
-    LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [dirname] [foldername]
+    ./LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [dirname] [foldername]
     ```
-3. `LASSO.exe` will ask for yuor dataset
+3. `LASSO.exe` will ask for your dataset
     ```
     C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30
     please input the path of the dataset : [Input your dataset here]
