@@ -16,16 +16,20 @@ LASSO is a C++ software package that perform penalized-likelihood approach for m
 The latest version of LASSO can be downloaded from [github page](https://github.com/alexwky/LASSO).
 
 ## Installation
-LASSO is an executable file. Run `LASSO.exe` through command prompt with a vector of arguments and an organized dataset.
-1. Go to the directory that have `LASSO.exe`
+LASSO is an executable file. Extract `LASSO.tar.gz` and run `LASSO.exe` with a vector of arguments and an organized dataset.
+1. Go to the directory that have `LASSO.tar.gz`
     ```
     cd ./[destination directory]
     ```
-2. Run `LASSO.exe` 
+2. Extract "LASSO.tar.gz"
+    ```
+    tar -xf LASSO.tar.gz
+    ```
+3. Run `LASSO.exe` 
     ```
     ./LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [dirname] [foldername]
     ```
-3. `LASSO.exe` will ask for your dataset
+4. `LASSO.exe` will ask for your dataset
     ```
     C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30
     please input the path of the dataset : [Input your dataset here]
