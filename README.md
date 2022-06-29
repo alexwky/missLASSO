@@ -98,6 +98,6 @@ Wong Kin Yau, Alex <<kin-yau.wong@polyu.edu.hk>>
 
 # Reference #
 
-(Reference Paper)
+Wong, K. Y., Zeng, D., and Lin, D. Y. (2021), "Penalized Regression for Multiple Types of Many Features With Missing Data," Statistica Sinica [online], DOI: 10.5705/ss.202020.0401.
 
 
