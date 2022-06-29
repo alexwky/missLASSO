@@ -9,48 +9,59 @@
 - [Reference](#Reference)
 
 # LASSO 
-LASSO is a C++ software package that perform penalized-likelihood approach for multiple typee of many features with missing data using expectation-maximization (EM) algorithm. We use a latent variable model to characterize the relationships across and within data types and to infer missing values from observed data. We develop a penalized-likelihood approach for variable selection and parameter estimation and devise an efficient expectation-maximization (EM) algorithm to implement our approach. We establish the asymptotic properties of the proposed estimators when the number of features increases at a polynomial rate of the sample size. 
+`LASSO` is a C++ software package that perform penalized-likelihood approach for multiple typee of many features with missing data using expectation-maximization (EM) algorithm. We use a latent variable model to characterize the relationships across and within data types and to infer missing values from observed data. We develop a penalized-likelihood approach for variable selection and parameter estimation and devise an efficient expectation-maximization (EM) algorithm to implement our approach. We establish the asymptotic properties of the proposed estimators when the number of features increases at a polynomial rate of the sample size. 
 
 # DOWNLOAD AND INSTALLATION
 ## Download
 The latest version of LASSO can be downloaded from [github page](https://github.com/alexwky/LASSO).
 
 ## Installation
-LASSO is an executable file. Extract `LASSO.tar.gz` and run `LASSO.exe` with a vector of arguments and an organized dataset.
-1. Go to the directory that have `LASSO.tar.gz`
+`LASSO` is an executable file. Users can run it on both Linux and Window environment using `LASSO.tar.gz` or `LASSO.exe` respectively.
+### Linux Environment
+1. Download `LASSO.tar.gz` to the destination directory
+2. Go to the directory that have `LASSO.tar.gz`
     ```
     cd ./[destination directory]
     ```
-2. Extract "LASSO.tar.gz"
+3. Extract `LASSO.tar.gz`
     ```
-    tar -xf LASSO.tar.gz
+    tar -xzvf LASSO.tar.gz
     ```
-3. Run `LASSO.exe` 
+4. Run `LASSO` 
     ```
-    ./LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [dirname] [foldername]
+    ./LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [cv] [lambda] [dirname] [foldername] [filename]
+    Example : C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset.csv 
     ```
-4. `LASSO.exe` will ask for your dataset
+### Window Environment
+1. Download `LASSO.exe` to the destionation directory
+2. Open command prompt and set the working directory
     ```
-    C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30
-    please input the path of the dataset : [Input your dataset here]
+    cd ./[destination directory]
     ```
-    *You can input the relative path of the dataset if the dataset is not at the same directory of `LASSO.exe`
-    
+3. Run `LASSO`
+    ```
+    LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [cv] [lambda] [dirname] [foldername] [filename]
+    Example : C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset.csv 
+    ```
 
 # Arguments
 
-There are 8 arguments that users have to input to the executable file through command prompt. Please read the following table for the details of the 8 arguments:
+There are 11 arguments that users have to input to the executable file through command prompt. Please read the following table for the details of the 8 arguments:
 
-| Argument | Description | Value(s) | Meanings | Omit | Remark |
+| Argument | Description | Value(s) / Format | Meanings | Omit | Remark |
 | --------- | --- | ---- | ---- | --- | ---- |
 | type  | Data type | 0/1/2  |<ul><li>0 : Gaussian</li><li>1: Binary</li><li>2: survival</li></ul>  | ✖  | -  |
 | method | Method for handling missing data | 0/1  |<ul><li>0 : Complete</li><li>1: Impute & Joint</li></ul>  | ✖  | -  |
 | penaltyno | Penalty type| 0  | <ul><li>0 : Complete</li></ul>  | ✖  | -  |
-| sizeX  | Number of X  | All integer ≥ 0  || ✖  | - |
-| r  | Numbers of latent variables |   | -  | ✖  | -  |
-| groupsize  |Dimension of each latent variables  | |   | ✖  | -  |
+| sizeX  | Number of covariate | All integer ≥ 0  || ✖  | - |
+| r  | Numbers of latent variables |   | -  | ✖  | seperate using ","  |
+| groupsize  |Dimension of each latent variables  | | - | ✖  | seperate using ","  |
+| cv  |Cross-Validation|0/1 |<ul><li>0 : Don't do Cross-Validation </li><li>1: Do Cross-Validation</li> | ✔  | -  |
+| lambda  |lambda series | .csv file | - | ✔ | -  |
 | dirname  | Output directory | Any file path | -  | ✔  | <ul><li>Relative path can be used</li><li>Default : current working directory</li></ul>  |
 | foldername  | Output folder name | Any name | -  | ✔  | Default `Result`  |
+| filename  | Input dataset name | .csv file | -  | ✖  | - |
+
 
 # Dataset
 
