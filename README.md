@@ -30,7 +30,7 @@ The latest version of LASSO can be downloaded from [github page](https://github.
 4. Run `LASSO` 
     ```
     ./LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [cv] [lambda] [dirname] [foldername] [filename]
-    Example : C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset.csv 
+    Example : C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1 groupsize 50,50 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset_1.csv 
     ```
 ### Window Environment
 1. Download `LASSO.exe` to the destionation directory
@@ -46,7 +46,7 @@ The latest version of LASSO can be downloaded from [github page](https://github.
 
 # Arguments
 
-There are 11 arguments that users have to input to the executable file through command prompt. Please read the following table for the details of the 8 arguments:
+There are 13 arguments that users have to input to the executable file through command prompt. Please read the following table for the details of the 8 arguments:
 
 | Argument | Description | Value(s) / Format | Meanings | Omit | Remark |
 | --------- | --- | ---- | ---- | --- | ---- |
@@ -58,6 +58,8 @@ There are 11 arguments that users have to input to the executable file through c
 | groupsize  |Dimension of each latent variables  | | - | ✖  | seperate using ","  |
 | cv  |Cross-Validation|0/1 |<ul><li>0 : Don't do Cross-Validation </li><li>1: Do Cross-Validation</li> | ✔  | -  |
 | lambda  |lambda series | .csv file | - | ✔ | -  |
+| XyExclude  |The column number(s) to exclude from the covariates of Y |  | - | ✔ | By default, all X are included |
+| XsExclude  |The column number(s) to exclude from the covariates of X  |  | - | ✔ | By default, all X are included |
 | dirname  | Output directory | Any file path | -  | ✔  | <ul><li>Relative path can be used</li><li>Default : current working directory</li></ul>  |
 | foldername  | Output folder name | Any name | -  | ✔  | Default `Result`  |
 | filename  | Input dataset name | .csv file | -  | ✖  | - |
@@ -71,6 +73,10 @@ The input dataset should be in `.csv` format and consist of 3 components outcome
 ||||||||||
 
 *Sample dataset can be downloaded from [github page](https://github.com/alexwky/LASSO).
+
+`SampleDataset_1.csv` is a dataset without covariate `X` and contain potentially covariate `S` only, with groupsize = 50,50 and r = 1,1,1.
+
+`SampleDataset_2.csv` is a dataset with both covariate `X` and contain potentially covariate `S` only, with sizeX = 6,  groupsize = 50,50,50 and r = 1,1,1,1.
 
 # Result
 
