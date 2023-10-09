@@ -8,40 +8,40 @@
 - [Contact](#Contact)
 - [Reference](#Reference)
 
-# LASSO 
-`LASSO` is a C++ software package that perform penalized-likelihood approach for multiple typee of many features with missing data using expectation-maximization (EM) algorithm. We use a latent variable model to characterize the relationships across and within data types and to infer missing values from observed data. We develop a penalized-likelihood approach for variable selection and parameter estimation and devise an efficient expectation-maximization (EM) algorithm to implement our approach. We establish the asymptotic properties of the proposed estimators when the number of features increases at a polynomial rate of the sample size. 
+# missLASSO 
+`missLASSO` is a C++ software package that performs variable selection and estimation for the regression analysis of an outcome of interest against multiple types of features with missing data. We use a latent factor model to characterize the relationships across and within different types of features and to infer missing values from the observed data. Variable selection and estimation are performed by a penalized maximum likelihood approach and the estimator is computed using an EM algorithm.
 
 # DOWNLOAD AND INSTALLATION
 ## Download
-The latest version of LASSO can be downloaded from [github page](https://github.com/alexwky/LASSO).
+The latest version of missLASSO can be downloaded from [github page](https://github.com/alexwky/missLASSO).
 
 ## Installation
-`LASSO` is an executable file. Users can run it on both Linux and Window environment using `LASSO.tar.gz` or `LASSO.exe` respectively.
+`missLASSO` is an executable file. Users can run it on the Linux or Window environment using `missLASSO.tar.gz` or `missLASSO.exe`, respectively.
 ### Linux Environment
-1. Download `LASSO.tar.gz` to the destination directory
-2. Go to the directory that have `LASSO.tar.gz`
+1. Download `missLASSO.tar.gz` to a destinated directory
+2. Go to the destinated directory:
     ```
-    cd ./[destination directory]
+    cd ./[destinated directory]
     ```
-3. Extract `LASSO.tar.gz`
+3. Extract `missLASSO.tar.gz`
     ```
-    tar -xzvf LASSO.tar.gz
+    tar -xzvf missLASSO.tar.gz
     ```
-4. Run `LASSO` 
+4. Run `missLASSO` 
     ```
-    ./LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [cv] [lambda] [dirname] [foldername] [filename]
-    Example : C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1 groupsize 50,50 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset_1.csv 
+    ./missLASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [cv] [lambda] [dirname] [foldername] [filename]
+    Example : C:\Users\Desktop\missLASSO>missLASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1 groupsize 50,50 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset_1.csv 
     ```
 ### Window Environment
-1. Download `LASSO.exe` to the destionation directory
+1. Download `missLASSO.exe` to a destionated directory
 2. Open command prompt and set the working directory
     ```
-    cd ./[destination directory]
+    cd ./[destinated directory]
     ```
-3. Run `LASSO`
+3. Run `missLASSO`
     ```
-    LASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [cv] [lambda] [dirname] [foldername] [filename]
-    Example : C:\Users\Desktop\LASSO>LASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset.csv 
+    missLASSO [type] [method] [penaltyno] [sizeX] [r] [groupsize] [cv] [lambda] [dirname] [foldername] [filename]
+    Example : C:\Users\Desktop\missLASSO>missLASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset.csv 
     ```
 
 # Arguments
@@ -104,6 +104,6 @@ Wong Kin Yau, Alex <<kin-yau.wong@polyu.edu.hk>>
 
 # Reference #
 
-Wong, K. Y., Zeng, D., and Lin, D. Y. (2021), "Penalized Regression for Multiple Types of Many Features With Missing Data," Statistica Sinica [online], DOI: 10.5705/ss.202020.0401.
+Wong, K. Y., Zeng, D., and Lin, D. Y. (2023), "Penalized regression for multiple types of many features with missing data," Statistica Sinica, 33, 633–662.
 
 
