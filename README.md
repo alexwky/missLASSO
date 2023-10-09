@@ -54,12 +54,12 @@ There are 13 arguments for the function:
 | method | Method for handling missing data | 0/1  |<ul><li>0 : Complete case analysis </li><li>1: Single imputation and full likelihood approach</li></ul>  | ✖  | -  |
 | penaltyno | Penalty type| 0/1  | <ul><li>0 : Lasso </li><li>1: Adaptive lasso with marginal coefficient as weight </li></ul>  | ✖  | -  |
 | sizeX  | Number of covariates (not modeled by the factor model) | Integer ≥ 0  || ✖  | - |
-| r  | Numbers of latent variables for each type of features |   | -  | ✖  | seperate using ","; the first component is the number of common factors, and the later components correspond to the number of factors specific to a type  |
-| groupsize  |Dimension of each latent variables  | | - | ✖  | seperate using ","  |
-| cv  |Cross-Validation|0/1 |<ul><li>0 : Don't do Cross-Validation </li><li>1: Do Cross-Validation</li> | ✔  | -  |
-| lambda  |lambda series | .csv file | - | ✔ | -  |
-| XyExclude  |The column number(s) to exclude from the covariates of Y |  | - | ✔ | By default, all X are included |
-| XsExclude  |The column number(s) to exclude from the covariates of X  |  | - | ✔ | By default, all X are included |
+| r  | Numbers of latent factors for each type of features |   | -  | ✖  | seperate using ","; the first component is the number of common factors, and the later components correspond to the number of factors specific to a type  |
+| groupsize  | Number of variables for each type of features  | | - | ✖  | seperate using ","  |
+| cv  |Cross-Validation|0/1 |<ul><li>0 : Do not perform cross-validation </li><li>1: Perform cross-validation</li> | ✔  | -  |
+| lambda  | sequence of tuning parameter values | .csv file | - | ✔ | -  |
+| XyExclude  | Indices of covariates that are to be excluded from the outcome model |  | - | ✔ | separated using ","; by default, all covariates are included |
+| XsExclude  | Indices of covariates that are to be excluded from the factor model |  | - | ✔ | separated using ","; by default, all covariates are included |
 | dirname  | Output directory | Any file path | -  | ✔  | <ul><li>Relative path can be used</li><li>Default : current working directory</li></ul>  |
 | foldername  | Output folder name | Any name | -  | ✔  | Default `Result`  |
 | filename  | Input dataset name | .csv file | -  | ✖  | - |
@@ -67,27 +67,27 @@ There are 13 arguments for the function:
 
 # Dataset
 
-The input dataset should be in `.csv` format and consist of 3 components outcome variable `Y`, covariates `X` and potentially missing covariates `S`. Therefore, dataset is a `n x (p+k+1)` amatrix, where `n` is the sample size, `p` is the number of covariates and `k` is the number of potentially missing covariates. The dataset should be in following format:
+The input dataset should be in `.csv` format and consist of 3 sets of input: outcome `Y`, covariates `X`, and potentially missing covariates `S`. The dataset is in the format of a `n x (p+k+1)` -matrix, where `n` is the sample size, `p` is the number of covariates and `k` is the number of potentially missing covariates. The dataset should be in following format:
 |Outcome variable| 1st covariate |2nd covariate|...|pth covariate|1st missing covariate|2nd missing covariate|...|kth missing covariate|
 |---|---|---|---|---|---|---|---|---|
 ||||||||||
 
-*Sample dataset can be downloaded from [github page](https://github.com/alexwky/LASSO).
+*Sample dataset can be downloaded from [github page](https://github.com/alexwky/missLASSO).
 
-`SampleDataset_1.csv` is a dataset without covariate `X` and contain potentially covariate `S` only, with groupsize = 50,50 and r = 1,1,1.
+`SampleDataset_1.csv` is a dataset without covariate `X` and contains potentially covariate `S` only, with groupsize = 50,50 and r = 1,1,1.
 
-`SampleDataset_2.csv` is a dataset with both covariate `X` and contain potentially covariate `S` only, with sizeX = 6,  groupsize = 50,50,50 and r = 1,1,1,1.
+`SampleDataset_2.csv` is a dataset with covariate `X` and contains potentially covariate `S` only, with sizeX = 6,  groupsize = 50,50,50 and r = 1,1,1,1.
 
 # Result
 
 The results will be stored in an output folder. By default, the output folder is called "Result" under current working directory. The output folder consist of following `.csv` files:
 
-`Complete mode` (mode == 0)
+`Complete casde analysis` (method == 0)
  1. Complete.csv
  2. Completye-lambda.csv
  3. Complete-loglikelihood.csv
  
-`Impute & Joint mode` (mode == 1)
+`Single imputation and full likelihood approach` (method == 1)
  1. Impute.csv
  2. Impute-imploglikelihood.csv
  3. Impute-lambda.csv
@@ -97,6 +97,12 @@ The results will be stored in an output folder. By default, the output folder is
  7. Joint-lambda.csv
  8. Joint-loglikelihood.csv
  9. Joint-param.csv
+
+The descriptions of the output files are as follows
+
+| File | Description |
+| --------- | --- |
+| Complete.csv/Impute.csv/Joint/csv  | asdasd |
 
 # Contact
 
