@@ -1,6 +1,6 @@
 **Table of Contents**
 
-- [LASSO](#LASSO)
+- [missLASSO](#missLASSO)
 - [DOWNLOAD AND INSTALLATION](#download-and-installation)
 - [Arguments](#Arguments)
 - [Dataset](#Dataset)
@@ -46,15 +46,15 @@ The latest version of missLASSO can be downloaded from [github page](https://git
 
 # Arguments
 
-There are 13 arguments that users have to input to the executable file through command prompt. Please read the following table for the details of the 8 arguments:
+There are 13 arguments for the function:
 
 | Argument | Description | Value(s) / Format | Meanings | Omit | Remark |
 | --------- | --- | ---- | ---- | --- | ---- |
-| type  | Data type | 0/1/2  |<ul><li>0 : Gaussian</li><li>1: Binary</li><li>2: survival</li></ul>  | ✖  | -  |
-| method | Method for handling missing data | 0/1  |<ul><li>0 : Complete</li><li>1: Impute & Joint</li></ul>  | ✖  | -  |
-| penaltyno | Penalty type| 0  | <ul><li>0 : Complete</li></ul>  | ✖  | -  |
-| sizeX  | Number of covariate | All integer ≥ 0  || ✖  | - |
-| r  | Numbers of latent variables |   | -  | ✖  | seperate using ","  |
+| type  | Type of the outcome variable | 0/1  |<ul><li>0 : Gaussian</li><li>1: Binary</li></ul>  | ✖  | -  |
+| method | Method for handling missing data | 0/1  |<ul><li>0 : Complete case analysis </li><li>1: Single imputation and full likelihood approach</li></ul>  | ✖  | -  |
+| penaltyno | Penalty type| 0/1  | <ul><li>0 : Lasso </li><li>1: Adaptive lasso with marginal coefficient as weight </li></ul>  | ✖  | -  |
+| sizeX  | Number of covariates (not modeled by the factor model) | Integer ≥ 0  || ✖  | - |
+| r  | Numbers of latent variables for each type of features |   | -  | ✖  | seperate using ","; the first component is the number of common factors, and the later components correspond to the number of factors specific to a type  |
 | groupsize  |Dimension of each latent variables  | | - | ✖  | seperate using ","  |
 | cv  |Cross-Validation|0/1 |<ul><li>0 : Don't do Cross-Validation </li><li>1: Do Cross-Validation</li> | ✔  | -  |
 | lambda  |lambda series | .csv file | - | ✔ | -  |
