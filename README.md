@@ -82,7 +82,7 @@ The input dataset should be in `.csv` format and consist of 3 sets of input: out
 
 The results will be stored in an output folder. By default, the output folder is called "Result" under current working directory. The output folder consist of following `.csv` files:
 
-`Complete casde analysis` (method == 0)
+`Complete case analysis` (method == 0)
  1. Complete.csv
  2. Completye-lambda.csv
  3. Complete-loglikelihood.csv
@@ -102,7 +102,7 @@ The descriptions of the output files are as follows
 
 | File | Description |
 | --------- | --- |
-| Complete.csv/Impute.csv/Joint/csv  | asdasd |
+| Complete.csv/Impute.csv/Joint.csv  | The files contain regression coefficients in the outcome model over all tuning parameter values considered. Let `q` be the number of tuning parameter values. The first `q` components of the output correspond to the number of nonzero coefficients under the tuning parameter values. Let `m` be the sum of the first `q` components of the output. The `q+1`-th to the `q+m`-th components correspond to the positions of the nonzero coefficients. The `q+m+1`-th to the `q+2m` compponents correspond to the values of the nonzero coefficients. For example, if `q=3` and the output is `1,2,4,0,0,1,0,1,2,3,0.3,0.3,0.4,0.4,0.5,0.6,0.7`, then for the first tuning parameter value, one variable is selected, the position is 0 (i.e., the first variable), and the coefficient is 0.3; for the second tuning parameter value, two variables are selected, the positions are (0,1), and the coefficients are (0.3,0.4); for the third tuning parameter, four variables are selected, the positions are (0,1,2,3), and the coefficients are (0.4,0.5,0.6,0.7) |
 
 # Contact
 
