@@ -33,7 +33,7 @@ The latest version of missLASSO can be downloaded from [github page](https://git
     Example : C:\Users\Desktop\missLASSO>missLASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1 groupsize 50,50 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset_1.csv 
     ```
 ### Window Environment
-1. Download `missLASSO.exe` to a destionated directory
+1. Download `missLASSO.exe` to a destinated directory
 2. Open command prompt and set the working directory
     ```
     cd ./[destinated directory]
@@ -74,13 +74,13 @@ The input dataset should be in `.csv` format and consist of 3 sets of input: out
 
 A sample dataset can be downloaded from [github page](https://github.com/alexwky/missLASSO).
 
-`SampleDataset_1.csv` is a dataset without covariate `X` and contains potentially covariate `S` only, with groupsize = 50,50.
+`SampleDataset_1.csv` is a dataset without covariate `X` and contains potentially missing covariate `S` only, with groupsize = 50,50.
 
-`SampleDataset_2.csv` is a dataset with covariate `X` and contains potentially covariate `S` only, with sizeX = 6,  groupsize = 50,50,50.
+`SampleDataset_2.csv` is a dataset with covariate `X` and potentially missing covariate `S`, with sizeX = 6,  groupsize = 50,50,50.
 
 # Output
 
-The results will be stored in an output folder. By default, the output folder is called "Result" under the current working directory. The output folder consist of following `.csv` files:
+All results will be stored in an output folder. By default, the output folder is called "Result" under the current working directory. The output folder will contain the following `.csv` files:
 
 `Complete case analysis` (method = 0)
  1. Complete.csv
@@ -98,7 +98,7 @@ The results will be stored in an output folder. By default, the output folder is
  8. Joint-loglikelihood.csv
  9. Joint-param.csv
 
-The descriptions of the output files are as follows
+The descriptions of the output files are as follows:
 
 | File | Description |
 | --------- | --- |
