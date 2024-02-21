@@ -44,7 +44,7 @@ The latest version of missLASSO can be downloaded from [github page](https://git
     Example : C:\Users\Desktop\missLASSO>missLASSO type 0 method 1 penaltyno 0 sizeX 0 r 1,1,1,1 groupsize 30,30,30 cv 1 lambda TestLambda.csv foldername testing filename SampleDataset.csv 
     ```
 
-# Arguments
+# Input
 
 There are 13 arguments for the function:
 
@@ -78,7 +78,7 @@ A sample dataset can be downloaded from [github page](https://github.com/alexwky
 
 `SampleDataset_2.csv` is a dataset with covariate `X` and contains potentially covariate `S` only, with sizeX = 6,  groupsize = 50,50,50.
 
-# Result
+# Output
 
 The results will be stored in an output folder. By default, the output folder is called "Result" under the current working directory. The output folder consist of following `.csv` files:
 
