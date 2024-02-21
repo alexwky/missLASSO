@@ -2,9 +2,9 @@
 
 - [missLASSO](#missLASSO)
 - [DOWNLOAD AND INSTALLATION](#download-and-installation)
-- [Arguments](#Arguments)
+- [Input](#Input)
 - [Dataset](#Dataset)
-- [Result](#Result)
+- [Output](#Output)
 - [Contact](#Contact)
 - [Reference](#Reference)
 
