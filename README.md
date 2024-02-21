@@ -106,7 +106,7 @@ The descriptions of the output files are as follows
 | Complete-lambda.csv/Impute-lambda.csv/Joint-lambda.csv  | Sequence of lambda values considered. If cv=1, then the last component of the lambda sequence is that selected by cross validation.|
 | Complete-loglikelihood.csv/Impute-loglikelihood.csv/Joint-loglikelihood.csv  |Sequence of log-likelihood values, corresponding to the lambda values in the "-lambda.csv" files |
 | Impute-imploglikelihood.csv | loglikelihood value evaluated at the imputed data|
-| Joint-param.csv | All parameter estimates at the selected tuning parameter value. The parameter estimates are ordered as follows: `$\alpha$`|
+| Joint-param.csv | All parameter estimates at the selected tuning parameter value. The parameter estimates are ordered as follows: $\alpha$ |
 
 # Contact
 
